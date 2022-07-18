@@ -4,6 +4,7 @@ import { useState } from 'react';
 import AppNavBar from './components/AppNavBar/AppNavBar';
 import './App.css';
 import Login from './components/Login/Login';
+import MappedUsers from './components/Pages/MappedUsers';
 
 function App() {
   //const [userId, setUserId] = useState("");
@@ -17,6 +18,7 @@ function App() {
       <AppNavBar isLoggedIn = {isLoggedIn} setIsLoggedIn = {setIsLoggedIn} />
 
       <Routes>
+          <Route exact path='/usermap' element={<MappedUsers/>}/>
           <Route exact path = '/' element = {<Login isLoggedIn = {isLoggedIn} setIsLoggedIn = {setIsLoggedIn} />}/>
           
           {/* <Route exact path = '/signup' element = {<Signup/>}/> */}
