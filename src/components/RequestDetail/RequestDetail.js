@@ -201,7 +201,26 @@ export default function RequestDetail(props) {
                 </Grid>
             </Grid>
 
-            <Grid>
+            <Grid container spacing={2}>
+                <Grid item xs={6}>
+                    <Box margin={2} display= "flex" justifyContent="center" alignItems="center">
+                        <Button sx={{backgroundColor: "#9DD6DF",
+                         '&:hover': {   backgroundColor: '#D3EBCD',
+                                        opacity: [0.9,0.8,0.7]
+                                    },
+                         }} variant='outlined' color='success'>Approve</Button>
+                    </Box>
+                </Grid>
+
+                <Grid item xs={6}>
+                    <Box margin={2} display= "flex" justifyContent="center" alignItems="center">
+                        <Button sx={{backgroundColor: "#FBC5C5",
+                         '&:hover': {   backgroundColor: '#FCC5C0',
+                                        opacity: [0.9,0.8,0.7]
+                                    },
+                         }} variant='outlined' color='error'>Reject</Button>
+                    </Box>
+                </Grid>
 
             </Grid>
 
