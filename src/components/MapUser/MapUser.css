@@ -18,9 +18,14 @@
     height: 90px;
     padding: 15px;
     margin-left: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     margin-right: 10px;
     border-radius: 10px;
+}
+.user-info:hover{
+    background-color: rgb(200, 204, 204);
+    height: 95px;
+    cursor: pointer;
 }
 .user-box{
     flex:1;
