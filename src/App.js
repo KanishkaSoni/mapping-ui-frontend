@@ -28,7 +28,7 @@ function App() {
       <AppNavBar isLoggedIn = {isLoggedIn} setIsLoggedIn = {setIsLoggedIn} />
 
       <Routes>
-          <Route exact path='/usermap' element={<MappedUsers/>}/>
+          <Route exact path='/usermap' element={<ProtectedRoute isLoggedIn = {isLoggedIn} ><MappedUsers userId = {userId}/></ProtectedRoute>}/>
           <Route exact path='/additem' element={<AddInventory/>}/>
           <Route exact path = '/' element = {<Login isLoggedIn = {isLoggedIn} setIsLoggedIn = {setIsLoggedIn} />}/>
           
@@ -37,7 +37,7 @@ function App() {
 
           <Route exact path = '/requestdetail/:reqId' element = {<ProtectedRoute isLoggedIn = {isLoggedIn} ><RequestDetail/></ProtectedRoute>}/>
 
-          
+
 
         </Routes>
 

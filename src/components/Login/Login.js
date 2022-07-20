@@ -141,6 +141,9 @@ export default function Login(props){
                 localStorage.setItem('signInInventory', true);
                 navigate('/additem');
             }
+            else{
+                setError(true);
+            }
             
             
         }
@@ -168,17 +171,17 @@ export default function Login(props){
         <div className="center">
 
             <Stack spacing={2} sx={{ width: '100%' }}>
-            <Snackbar open={error} autoHideDuration={6000} onClose={handleCloseError}>
+            <Snackbar open={error} autoHideDuration={4000} onClose={handleCloseError}>
 
                 
                 <Alert onClose={handleCloseError} severity="error" sx={{ width: '100%' }}>
-                Incorrect Username/Password!
+                    Incorrect Username/Password/Role!
                 </Alert>
                 
                 
 
             </Snackbar>
-            <Snackbar open={success} autoHideDuration={6000} onClose={handleCloseSuccess}>
+            <Snackbar open={success} autoHideDuration={4000} onClose={handleCloseSuccess}>
 
                 
                 

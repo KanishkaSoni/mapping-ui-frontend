@@ -39,6 +39,7 @@ export default function AppNavBar(props) {
   const handleHomeClick = () => {
     console.log('navigating to home....');
     navigate('/vadminhome');
+
     //console.log('after navigate');
     setAnchorEl(null);
 
@@ -48,16 +49,21 @@ export default function AppNavBar(props) {
     localStorage.removeItem('signInVerification');
     navigate('/');
     console.log('Logout clicked');
+    setAnchorEl(null);
+
   }
 
   const handleClickLogoutInventory = () => {
     localStorage.removeItem('signInInventory');
     navigate('/');
     console.log('Logout clicked');
+    setAnchorEl(null);
+
   }
 
   const handleClickMapping = () => {
     navigate('/usermap');
+    setAnchorEl(null);
   }
 
   return (
