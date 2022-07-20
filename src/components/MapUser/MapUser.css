@@ -1,0 +1,57 @@
+.body{
+    background-color: brown;
+}
+.user-list-head{
+    display: flex;
+    height: 50px;
+    /* background-color: rgb(105, 166, 216); */
+    background-color: rgb(80, 83, 85);
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgb(243, 230, 230);
+}
+.head-span{
+    flex:1;
+}
+.user-info{
+    display: flex;
+    background-color: rgb(216, 230, 230);
+    height: 90px;
+    padding: 15px;
+    margin-left: 10px;
+    margin-bottom: 6px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.user-info:hover{
+    background-color: rgb(200, 204, 204);
+    height: 95px;
+    cursor: pointer;
+}
+.user-box{
+    flex:1;
+}
+.user-name{
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+.user-loc{
+    padding-left: 10px;
+}
+.user-phone{
+    margin-bottom: 15px;
+}
+.small-text{
+    font-size: 13px;
+    color: rgb(82, 77, 77);
+}
+.user-vehicle{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+.vehicle-id{
+    padding-left: 20px;
+    margin-top: 8px;
+}
