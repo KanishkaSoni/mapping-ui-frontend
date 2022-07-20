@@ -62,10 +62,10 @@ export default function AddItems(){
                 </div>
                 <div>
                     {/* <button className='vehicleAddBtn'>Add</button> */}
-                    <Button variant="contained" className='vehicleAddBtn' 
+                    <a href='/additem'><Button variant="contained" className='vehicleAddBtn' 
                     // onClick={<Alert variant="filled" severity="success">This is a success alert — check it out!</Alert>}
                     onClick={handleAlert}
-                    >Add vehicle</Button>
+                    >Add vehicle</Button></a>
                     </div>
             </div>
         </div>
