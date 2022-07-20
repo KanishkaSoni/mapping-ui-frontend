@@ -12,6 +12,7 @@ import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import { Navigate, useNavigate } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 export default function AppNavBar(props) {
   const [auth, setAuth] = React.useState(true);
@@ -42,6 +43,12 @@ export default function AppNavBar(props) {
     setAnchorEl(null);
 
   };
+
+  const handleClickLogout = () => {
+    localStorage.removeItem('signIn');
+    navigate('/');
+    console.log('Logout clicked');
+  }
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -74,9 +81,23 @@ export default function AppNavBar(props) {
           </Typography>
           {auth && (
             <div>
-                {   props.isLoggedIn &&
+                {    localStorage.getItem('signIn') === 'true' && 
 
-                    <div>
+                    <div className='navbar-brand'>
+                    <Button sx={{backgroundColor: "#FBC5C5",
+                         '&:hover': {   backgroundColor: '#FCC5C0',
+                                        opacity: [0.9,0.8,0.7]
+                                    },
+                         }} variant='outlined' color='error' onClick={handleClickLogout}>Log Out</Button>
+                    </div>
+                } 
+
+
+
+
+                {    localStorage.getItem('signIn') === 'true' && 
+
+                    <div className='navbar-brand'>
                     <IconButton
                         size="large"
                         aria-label="account of current user"

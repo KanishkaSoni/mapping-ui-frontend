@@ -71,10 +71,10 @@ export default function RequestDetail(props) {
         
     // }
 
-    // React.useEffect(() => {
-    //     //console.log("useEff Called");
-    //     getData();
-    // },[]);
+    React.useEffect(() => {
+        //console.log(localStorage.getItem('globalMessage'));
+        //getData();
+    },[]);
 
   return (
     <div >
@@ -101,7 +101,7 @@ export default function RequestDetail(props) {
                 
             </CardActions>
             </Card> */}
-            <Box display= "flex" justifyContent="center" alignItems="center">
+            <Box sx={{marginTop: 2}} display= "flex" justifyContent="center" alignItems="center">
                 <Typography alignItems="center" variant="h4" component="div">
                     <i>User Details</i>
                 </Typography>
@@ -174,27 +174,12 @@ export default function RequestDetail(props) {
                 <Stack sx={{ marginTop: 2, marginRight: 2, marginBottom: 3 }} spacing={2} direction="column">
                     <Paper sx={{backgroundColor: "#FFF9D7"}}>
                         <Typography sx={{margin: 1}} variant="h5" component="div">
-                            Username: {params.reqId}
+                            Scooter: S1 Pro
                         </Typography>
                     </Paper>
                     <Paper sx={{backgroundColor: "#FFF9D7"}}>
                         <Typography  sx={{ fontSize: 15, margin: 1 }} gutterBottom>
-                            Contact: 99999 88888
-                        </Typography>
-                    </Paper>
-                    <Paper sx={{backgroundColor: "#FFF9D7"}}>
-                        <Typography sx={{margin: 1}} variant="body">
-                            Email: abc@gmail.com
-                        </Typography>
-                    </Paper>
-                    <Paper sx={{backgroundColor: "#FFF9D7"}}>
-                        <Typography sx={{margin: 1}} variant="body">
-                            Address: xyz
-                        </Typography>
-                    </Paper>
-                    <Paper sx={{backgroundColor: "#FFF9D7"}}>
-                        <Typography sx={{margin: 1}} variant="body">
-                            Occupation
+                            Color: red
                         </Typography>
                     </Paper>
                 </Stack>

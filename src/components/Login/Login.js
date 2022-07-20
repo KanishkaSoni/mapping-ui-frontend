@@ -35,6 +35,8 @@ export default function Login(props){
 
     const [success, setSuccess] = React.useState(false);
 
+
+
     const [values, setValues] = React.useState({
         password: '',
         showPassword: false,
@@ -124,7 +126,9 @@ export default function Login(props){
 
             console.log("Valid Credentials");
             setSuccess(true);
-            props.setIsLoggedIn(true);
+            //props.setIsLoggedIn(true);
+
+            localStorage.setItem('signIn', true);
             navigate('/vadminhome');
             
         }
@@ -140,6 +144,13 @@ export default function Login(props){
 
         //console.log(data);
     }
+
+    React.useEffect(() => {
+        console.log(localStorage.getItem('signIn'));
+        //console.log(localStorage.getItem('globalMessage'));
+        //localStorage.removeItem('globalMessage');
+        //getData();
+    },[]);
         
     return(
         <div className="center">

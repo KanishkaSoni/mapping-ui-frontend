@@ -44,7 +44,7 @@ export default function VerificationRequest(props) {
             </Typography>
           </CardContent>
         </CardActionArea>
-        <Button idd={props.username} onClick={handleButtonClick} sx={{margin: 2,backgroundColor: '#A0D995', color: '#4CACBC',
+        <Button idd={props.username} onClick={handleButtonClick} sx={{margin: 2,backgroundColor: '#A0D995', color: 'black',
           '&:hover': {backgroundColor: '#A0D995',
                       opacity: [0.9,0.8,0.7]
                      },
