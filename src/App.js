@@ -37,6 +37,8 @@ function App() {
 
           <Route exact path = '/requestdetail/:reqId' element = {<ProtectedRoute isLoggedIn = {isLoggedIn} ><RequestDetail/></ProtectedRoute>}/>
 
+          
+
         </Routes>
 
       </div>

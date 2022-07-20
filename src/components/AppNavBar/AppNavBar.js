@@ -44,10 +44,20 @@ export default function AppNavBar(props) {
 
   };
 
-  const handleClickLogout = () => {
-    localStorage.removeItem('signIn');
+  const handleClickLogoutVerification = () => {
+    localStorage.removeItem('signInVerification');
     navigate('/');
     console.log('Logout clicked');
+  }
+
+  const handleClickLogoutInventory = () => {
+    localStorage.removeItem('signInInventory');
+    navigate('/');
+    console.log('Logout clicked');
+  }
+
+  const handleClickMapping = () => {
+    navigate('/usermap');
   }
 
   return (
@@ -81,21 +91,34 @@ export default function AppNavBar(props) {
           </Typography>
           {auth && (
             <div>
-                {    localStorage.getItem('signIn') === 'true' && 
+
+                {    localStorage.getItem('signInVerification') === 'true' && 
+
+                <div className='navbar-brand'>
+                <Button sx={{backgroundColor: "#9DD6DF",
+                    '&:hover': {   backgroundColor: '#D3EBCD',
+                                    opacity: [0.9,0.8,0.7]
+                                },
+                    }} variant='outlined' color='success' onClick={handleClickMapping}>Mappings</Button>
+                </div>
+                } 
+
+                {    localStorage.getItem('signInVerification') === 'true' && 
 
                     <div className='navbar-brand'>
                     <Button sx={{backgroundColor: "#FBC5C5",
                          '&:hover': {   backgroundColor: '#FCC5C0',
                                         opacity: [0.9,0.8,0.7]
                                     },
-                         }} variant='outlined' color='error' onClick={handleClickLogout}>Log Out</Button>
+                         }} variant='outlined' color='error' onClick={handleHomeClick}>Home</Button>
                     </div>
                 } 
 
 
 
 
-                {    localStorage.getItem('signIn') === 'true' && 
+
+                {    (localStorage.getItem('signInVerification') === 'true' || localStorage.getItem('signInInventory') === 'true') && 
 
                     <div className='navbar-brand'>
                     <IconButton
@@ -122,9 +145,20 @@ export default function AppNavBar(props) {
                         }}
                         open={Boolean(anchorEl)}
                         onClose={handleClose}
-                    >
-                        <MenuItem onClick={handleHomeClick}>Home</MenuItem>
-                        <MenuItem onClick={handleClose}>Mappings</MenuItem>
+                    >   
+                        { localStorage.getItem('signInVerification') === 'true' &&
+                          <div>
+                            <MenuItem onClick={handleClickLogoutVerification}>Logout</MenuItem>
+                            <MenuItem onClick={handleClickMapping}>Mappings</MenuItem>
+                          </div>
+                        }
+
+                        { localStorage.getItem('signInInventory') === 'true' &&
+                          <div>
+                            <MenuItem onClick={handleClickLogoutInventory}>Logout</MenuItem>
+                          </div>
+                        }
+
                     </Menu>
                     </div>
                 }

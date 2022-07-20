@@ -123,13 +123,25 @@ export default function Login(props){
         // console.log(data);
 
         if(user.username === 'abc' && user.password === '123'){
+            
+            if(user.userRole === 'Verification Admin'){
+                console.log("Valid Credentials");
+                setSuccess(true);
+                //props.setIsLoggedIn(true);
 
-            console.log("Valid Credentials");
-            setSuccess(true);
-            //props.setIsLoggedIn(true);
+                localStorage.setItem('signInVerification', true);
+                navigate('/vadminhome');
+            }
+            else if(user.userRole === 'Inventory Admin')
+            {
+                console.log("Valid Credentials");
+                setSuccess(true);
+                //props.setIsLoggedIn(true);
 
-            localStorage.setItem('signIn', true);
-            navigate('/vadminhome');
+                localStorage.setItem('signInInventory', true);
+                navigate('/additem');
+            }
+            
             
         }
         else{
