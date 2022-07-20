@@ -4,10 +4,12 @@
 .user-list-head{
     display: flex;
     height: 50px;
-    background-color: rgb(105, 166, 216);
+    /* background-color: rgb(105, 166, 216); */
+    background-color: rgb(80, 83, 85);
     padding: 10px;
     margin-left: 10px;
     margin-right: 10px;
+    color: rgb(243, 230, 230);
 }
 .head-span{
     flex:1;

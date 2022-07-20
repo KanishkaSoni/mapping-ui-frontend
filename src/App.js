@@ -5,6 +5,7 @@ import AppNavBar from './components/AppNavBar/AppNavBar';
 import './App.css';
 import Login from './components/Login/Login';
 import MappedUsers from './components/Pages/MappedUsers';
+import AddInventory from './components/Pages/AddInventory';
 
 function App() {
   //const [userId, setUserId] = useState("");
@@ -19,6 +20,7 @@ function App() {
 
       <Routes>
           <Route exact path='/usermap' element={<MappedUsers/>}/>
+          <Route exact path='/additem' element={<AddInventory/>}/>
           <Route exact path = '/' element = {<Login isLoggedIn = {isLoggedIn} setIsLoggedIn = {setIsLoggedIn} />}/>
           
           {/* <Route exact path = '/signup' element = {<Signup/>}/> */}

@@ -1,0 +1,27 @@
+.vehicleHead{
+    margin: 10px 40px;
+    color: rgb(58, 100, 101);
+}
+#demo-simple-select{
+    width: 90px;
+}
+.vehicleInfo{
+    display: flex;
+    align-items: center;
+    margin: 50px 30px;
+    /* border: 1px solid red; */
+    position: relative;
+}
+.vehicleType{
+    margin: 0px 20px;
+}
+.vehicleColor{
+    margin: 0px 30px;
+}
+.vehicleAddBtn{
+    border-radius: 5%;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    /* margin: 20px 30px; */
+}
